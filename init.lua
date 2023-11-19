@@ -71,6 +71,9 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
+},
+{
+    'NvChad/nvim-colorizer.lua'
 }
 })
 
@@ -109,3 +112,5 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+require 'colorizer'.setup()
