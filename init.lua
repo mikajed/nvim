@@ -117,4 +117,8 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require 'colorizer'.setup()
-require('lualine').setup()
+
+
+require('lualine').setup {
+  options = { theme = 'vscode' }
+}
