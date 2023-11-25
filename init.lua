@@ -12,7 +12,7 @@ vim.opt.smartindent = true	--autoindent new lines
 vim.opt.cursorline = true	-- show cursor line
 vim.opt.wrap = false	-- no wrap
 vim.opt.title = true	-- show title in terminal
-vim.opt.background = "dark"	-- bg color
+vim.opt.background = "light"	-- bg color
 
 
 -- lazy plugin manager --
@@ -74,6 +74,9 @@ require("lazy").setup({
 },
 {
     'NvChad/nvim-colorizer.lua'
+},
+{
+  'nvim-lualine/lualine.nvim'
 }
 })
 
@@ -114,3 +117,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require 'colorizer'.setup()
+require('lualine').setup()
