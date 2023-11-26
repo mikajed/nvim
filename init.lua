@@ -13,6 +13,8 @@ vim.opt.cursorline = true	-- show cursor line
 vim.opt.wrap = false	-- no wrap
 vim.opt.title = true	-- show title in terminal
 vim.opt.background = "dark"	-- bg color
+vim.cmd [[autocmd VimEnter * Neotree]] -- Automatic NeoTree on startup
+
 
 
 -- lazy plugin manager --
@@ -120,13 +122,14 @@ require 'colorizer'.setup()
 
 
 require('lualine').setup {
-  options = { theme = 'vscode' }
+  options = { theme = 'vscode' },
+  extensions = {'neo-tree'}
 }
 
 require('neo-tree').setup {
   filesystem = {
     filtered_items = {
-      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      visible = true,
       hide_dotfiles = false,
       hide_gitignored = true,
     }
