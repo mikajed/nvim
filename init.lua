@@ -12,7 +12,7 @@ vim.opt.smartindent = true	--autoindent new lines
 vim.opt.cursorline = true	-- show cursor line
 vim.opt.wrap = false	-- no wrap
 vim.opt.title = true	-- show title in terminal
-vim.opt.background = "light"	-- bg color
+vim.opt.background = "dark"	-- bg color
 
 
 -- lazy plugin manager --
@@ -121,4 +121,14 @@ require 'colorizer'.setup()
 
 require('lualine').setup {
   options = { theme = 'vscode' }
+}
+
+require('neo-tree').setup {
+  filesystem = {
+    filtered_items = {
+      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      hide_dotfiles = false,
+      hide_gitignored = true,
+    }
+  }
 }
